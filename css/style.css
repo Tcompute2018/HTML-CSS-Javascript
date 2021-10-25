@@ -51,7 +51,22 @@ body{
     text-decoration: none;
     color: black;
     background: #96e0e9;
-    moz-transition: background-color 200ms ease-in;
+    -moz-transition: background-color 200ms ease-in;
+    -webkit-transition: background-color 200ms ease-in;
+    -ms-transitio: background-color 200ms ease-in;
+    -o-transition: background-color 200ms ease-in;
+    transition: background-color 200ms ease-in;
+}
+
+.nav_bar ul li a#onlink{
+    background: #ffffff;
+    color: #000000;
+
+}
+.nav_bar ul li a#onlink :hover{
+    background: #ffffff;
+    color: #000000;
     
 }
+
 
