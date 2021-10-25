@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Book it</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Booking.css" />
+</head>
+
+<body>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="Booking.html" id="onlink">Booking</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Registration.html">Login</a></li>
+            <li><a href="Login.html">Registration</a></li>
+        </ul>
+    </div>
+    <div class="main_container">
+        <form action="reservation.php" method="post">
+            <div class="elem-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="visitor_name" placeholder="Full Name" pattern=[A-Z\sa-z]{3,20}
+                    required>
+            </div>
+            <div class="elem-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="visitor_email" placeholder="Name@email.com" required>
+            </div>
+            <div class="elem-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="visitor_phone" placeholder="xxx-xxx-xxxx"
+                    pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div>
+            <hr>
+            <div class="elem-group inlined">
+                <label for="adult">Adults</label>
+                <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="child">Children</label>
+                <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="checkin-date">Check-in Date</label>
+                <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="checkout-date">Check-out Date</label>
+                <input type="date" id="checkout-date" name="checkout" required>
+            </div>
+            <div class="elem-group">
+                <label for="room-selection">Select Room Preference</label>
+                <select id="room-selection" name="room_preference" required>
+                    <option value="">Choose Room Size</option>
+                    <option value="connecting">KING</option>
+                    <option value="adjoining">QUEEN</option>
+                    <option value="adjacent">FULL</option>
+                </select>
+            </div>
+            <hr>
+            <div class="elem-group">
+                <label for="message">Anything Else?</label>
+                <textarea id="message" name="visitor_message"
+                    placeholder="Tell us anything else that might be important." required></textarea>
+            </div>
+            <button type="submit">Book The Rooms</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
