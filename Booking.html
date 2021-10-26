@@ -8,52 +8,52 @@
     <title>Let's Book it</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/Booking.css" />
+       
 </head>
-
 <body>
     <div class="nav_bar">
         <ul>
             <li><a href="main.html">Home</a></li>
             <li><a href="Booking.html" id="onlink">Booking</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Registration.html">Login</a></li>
-            <li><a href="Login.html">Registration</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Registration.html">Registration</a></li>
         </ul>
     </div>
     <div class="main_container">
-        <form action="reservation.php" method="post">
-            <div class="elem-group">
+        <form id = "Booking" class="elem-group">
+            <div id="name">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="visitor_name" placeholder="Full Name" pattern=[A-Z\sa-z]{3,20}
+                <input type="text"  placeholder="Full Name" pattern=[A-Z\sa-z]{3,20}
                     required>
             </div>
-            <div class="elem-group">
+            <div id = "email" class="elem-group">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="visitor_email" placeholder="Name@email.com" required>
+                <input type="email"  placeholder="Name@email.com" required>
             </div>
-            <div class="elem-group">
+            <div id = "phone" class="elem-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="visitor_phone" placeholder="xxx-xxx-xxxx"
+                <input type="tel"  placeholder="xxx-xxx-xxxx"
                     pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
             </div>
             <hr>
-            <div class="elem-group inlined">
+            <div id = "adult" class="elem-group inlined">
                 <label for="adult">Adults</label>
-                <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                <input type="number" name="total_adults" placeholder="2" min="1" required>
             </div>
-            <div class="elem-group inlined">
+            <div id = "child" class="elem-group inlined">
                 <label for="child">Children</label>
-                <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+                <input type="number" name="total_children" placeholder="2" min="0" required>
             </div>
-            <div class="elem-group inlined">
+            <div id = "checkin-date" class="elem-group inlined">
                 <label for="checkin-date">Check-in Date</label>
-                <input type="date" id="checkin-date" name="checkin" required>
+                <input type="date" name="checkin" required>
             </div>
-            <div class="elem-group inlined">
+            <div id = "checkout-date" class="elem-group inlined">
                 <label for="checkout-date">Check-out Date</label>
-                <input type="date" id="checkout-date" name="checkout" required>
+                <input type="date" name="checkout" required>
             </div>
-            <div class="elem-group">
+            <div id = "BedSize" class="elem-group">
                 <label for="room-selection">Select Room Preference</label>
                 <select id="room-selection" name="room_preference" required>
                     <option value="">Choose Room Size</option>
@@ -63,15 +63,15 @@
                 </select>
             </div>
             <hr>
-            <div class="elem-group">
+            <div id= "message" class="elem-group">
                 <label for="message">Anything Else?</label>
-                <textarea id="message" name="visitor_message"
+                <textarea name="visitor_message"
                     placeholder="Tell us anything else that might be important." required></textarea>
             </div>
-            <button type="submit">Book The Rooms</button>
+            <button type ="button" onclick="Booking()">Booking</button>
         </form>
-
     </div>
+    <script src="..\JS\Booking.js"></script>
 </body>
 
 </html>
