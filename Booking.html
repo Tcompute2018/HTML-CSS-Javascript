@@ -23,13 +23,13 @@
     </div>
     <div class="main_container">
         <form id = "Booking" class="elem-group">
-            <div id="name">
-                <label for="name">Full Name</label>
+            <div id = "name" class="elem-group">
+                <label>Full Name</label>
                 <input type="text"  placeholder="Full Name" pattern=[A-Z\sa-z]{3,20}
                     required>
             </div>
             <div id = "email" class="elem-group">
-                <label for="email">E-mail</label>
+                <label>E-mail</label>
                 <input type="email"  placeholder="Name@email.com" required>
             </div>
             <div id = "phone" class="elem-group">
@@ -48,19 +48,19 @@
             </div>
             <div id = "checkin-date" class="elem-group inlined">
                 <label for="checkin-date">Check-in Date</label>
-                <input type="date" name="checkin" required>
+                <input type="date" name="checkin-date" required>
             </div>
             <div id = "checkout-date" class="elem-group inlined">
                 <label for="checkout-date">Check-out Date</label>
-                <input type="date" name="checkout" required>
+                <input type="date" name="checkout-date" required>
             </div>
             <div id = "BedSize" class="elem-group">
                 <label for="room-selection">Select Room Preference</label>
                 <select id="room-selection" name="room_preference" required>
                     <option value="">Choose Room Size</option>
-                    <option value="connecting">KING</option>
-                    <option value="adjoining">QUEEN</option>
-                    <option value="adjacent">FULL</option>
+                    <option value="KING">KING</option>
+                    <option value="QUEEN">QUEEN</option>
+                    <option value="FULL">FULL</option>
                 </select>
             </div>
             <hr>

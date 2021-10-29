@@ -1,3 +1,5 @@
+
+
 var currentDateTime = new Date();
 var year = currentDateTime.getFullYear();
 var month = (currentDateTime.getMonth() + 1);
@@ -20,6 +22,7 @@ checkinElem.onchange = function () {
 }
 
 function Booking(){
+    
 
 var myname = document.getElementById("name")
 var email = document.getElementById("email")
