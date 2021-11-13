@@ -10,4 +10,5 @@ myForm.onsubmit = function(e){
     console.log(myForm.email.value);
     console.log(myForm.passWord.value);
     myForm.reset();
+    
 }
